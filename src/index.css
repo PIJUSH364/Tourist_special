@@ -1,0 +1,20 @@
+*,*::after,*::before{
+    margin: 0;
+}
+
+body{
+    font-family: 'Raleway', sans-serif;
+  
+    -ms-overflow-style: none;  /* internet explor and edge */
+    scrollbar-width: none;  /* fire_fox */
+}
+input{
+      font-family: 'Raleway', sans-serif;  
+}
+input::placeholder{
+     color: rgba(0,0,0,0.26),
+}
+/* chrome ,safari and opera */
+::-webkit-scrollbar{
+    display: none;
+}
