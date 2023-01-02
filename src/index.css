@@ -14,7 +14,10 @@ input{
 input::placeholder{
      color: rgba(0,0,0,0.26),
 }
-
+.css-o4b71y-MuiAccordionSummary-content{
+    align-items: center !important;
+    justify-content: space-between !important;
+}
 /* chrome ,safari and opera */
 ::-webkit-scrollbar{
     display: none;
@@ -22,5 +25,8 @@ input::placeholder{
 }
 
 @media (max-width: 600px) {
+    .ui{
+    width: max-content;
+    }
   /* Styles for mobile devices go here */
 }
