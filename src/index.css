@@ -1,10 +1,10 @@
 *,*::after,*::before{
     margin: 0;
+   
 }
 
 body{
     font-family: 'Raleway', sans-serif;
-  
     -ms-overflow-style: none;  /* internet explor and edge */
     scrollbar-width: none;  /* fire_fox */
 }
@@ -14,7 +14,13 @@ input{
 input::placeholder{
      color: rgba(0,0,0,0.26),
 }
+
 /* chrome ,safari and opera */
 ::-webkit-scrollbar{
     display: none;
+  
+}
+
+@media (max-width: 600px) {
+  /* Styles for mobile devices go here */
 }

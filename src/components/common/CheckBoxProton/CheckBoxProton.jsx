@@ -1,8 +1,10 @@
 import { Box, Checkbox, FormControlLabel } from '@mui/material';
+import { grey } from '@mui/material/colors';
 import React from 'react';
-const rootStyle = {
-  '&$checked': {
-    color: '#000',
+const checkBoxStyle = {
+  color: grey[800],
+  '&.Mui-checked': {
+    color: grey[600],
   },
 };
 const warpStyle = {
@@ -22,7 +24,7 @@ const CheckBoxProton = ({ cuisine, changeChecked }) => {
         className="label warp"
         control={
           <Checkbox
-            style={rootStyle}
+            sx={checkBoxStyle}
             className="checked root"
             size="small"
             checked={checked}
