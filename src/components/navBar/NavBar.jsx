@@ -43,7 +43,15 @@ const menuItemStyle = {
     xl: 'flex',
   },
 };
-
+const sideSliderStyle = {
+  top: 0,
+  bottom: 0,
+  right: 0,
+  width: '370px',
+  position: 'fixed',
+  overflow: 'auto',
+  transition: ' all 1.3s ease-in-out',
+};
 export const NavBar = ({
   selectedCategory,
   selectedRating,
@@ -95,13 +103,7 @@ export const NavBar = ({
           gap={1}
           color={'#000'}
           style={{
-            top: 0,
-            bottom: 0,
-            right: 0,
-            width: '370px',
-            position: 'fixed',
-            overflow: 'auto',
-            transition: ' all 1.3s ease-in-out',
+            ...sideSliderStyle,
             transform: transformValue,
           }}>
           {' '}
