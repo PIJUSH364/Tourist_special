@@ -9,7 +9,6 @@ import { List } from '../../components/Home/List/List';
 import { SearchBar } from '../../components/Home/searchBar/SearchBar';
 import { dataList } from '../../Constants/data';
 import { changeZIndex } from '../../redux/domSlice';
-
 const cancelIconStyle = {
   display: {
     xs: 'block',
@@ -28,6 +27,8 @@ const filterPanelStatus = {
     xl: 'block',
   },
 };
+
+
 export const Home = ({
   selectedCategory,
   selectedRating,

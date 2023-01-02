@@ -4,6 +4,9 @@ import {
   ExpandMore,
   FilterList,
   Menu,
+  Person,
+  Person2,
+  PersonPin,
   Sort,
 } from '@mui/icons-material';
 import {
@@ -11,6 +14,7 @@ import {
   AccordionDetails,
   AccordionSummary,
   Box,
+  Divider,
   IconButton,
   Stack,
   Typography,
@@ -81,12 +85,13 @@ export const NavBar = ({
       </Stack>
 
       <Box>
-        <Box
+        <Stack
+          gap={1}
           boxShadow={
             ' rgba(136, 165, 191, 0.48) 6px 2px 16px 0px, rgba(48, 41, 41, 0.8) -6px -2px 16px 0px'
           }
-          bgcolor={'gray'}
-          p={3}
+          bgcolor={'#fff'}
+          color={'#000'}
           style={{
             top: 0,
             bottom: 0,
@@ -97,21 +102,33 @@ export const NavBar = ({
             transition: ' all 1.3s ease-in-out',
             transform: transformValue,
           }}>
-          <IconButton
-            onPointerDown={() => {
-              setToggleStatus(!toggleStatus);
-              setTimeout(() => {
-                dispatch(changeZIndex(3));
-              }, 1000);
-            }}>
-            <Cancel style={{ color: '#fff' }} />
-          </IconButton>
-          <Box direction="row" gap={2} alignItems="center" color={'#fff'}>
-            <Typography variant="h6">LogIn</Typography>
-            <Typography variant="h6">SignUp</Typography>
-            <Typography variant="h6">Dashboard</Typography>
-          </Box>
-          <>
+          <Stack
+            direction="row"
+            justifyContent={'space-between'}
+            alignItems={'center'}>
+            <Stack direction="row" alignItems={'center'} p={0.5}>
+              <IconButton>
+                <PersonPin sx={{ fontSize: 35 }} />
+              </IconButton>
+              <Typography variant="h5" component={'p'} color={'#2979FF'}>
+                LogIn / SignUp
+              </Typography>
+            </Stack>
+
+            <div>
+              <IconButton
+                onPointerDown={() => {
+                  setToggleStatus(!toggleStatus);
+                  setTimeout(() => {
+                    dispatch(changeZIndex(3));
+                  }, 1000);
+                }}>
+                <Cancel sx={{ fontSize: 32 }} />
+              </IconButton>
+            </div>
+          </Stack>
+          <Divider />
+          <Box p={1}>
             <Accordion>
               <AccordionSummary
                 onClick={() => {
@@ -137,8 +154,8 @@ export const NavBar = ({
                 />
               </AccordionDetails>
             </Accordion>
-          </>
-        </Box>
+          </Box>
+        </Stack>
       </Box>
     </>
   );
